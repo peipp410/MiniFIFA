@@ -1,6 +1,6 @@
 # MiniFIFA
 
-This is the course project for BI506-Database Concepts in SJTU.
+This is the course project for BI506-Database Concepts in SJTU. It is written by Django.
 
 ## Usage
 
