@@ -1,0 +1,55 @@
+<html>
+    <body>
+        <table id="fish"> </table>
+
+        <script>
+            var content="<tr id='r1'><th>海鲜店名称</th>"+
+                        "<th>海鲜名称</th>"+
+                        "<th>销售数量（箱）</th>"+
+                        "<th>单价（元）</th>"+"</tr>";
+            function sale(shop, name, num, price){
+                content = content + "<tr><td>"+shop+"</td>"+
+                                    "<td>"+name+"</td>"+
+                                    "<td>"+num+"</td>"+
+                                    "<td>"+price+"</td>"+
+                                    "</tr>"
+                document.getElementById("fish").innerHTML=content;
+            }
+            function CheckValue(event){
+                var flag = true;
+                if (document.getElementById('s1').value == ''){
+                    alert("不能为空！");
+                    flag = false;
+                }
+                if (document.getElementById('h1').value == ''){
+                    alert("不能为空！");
+                    flag = false;
+                }
+                if (document.getElementById('n1').value == ''){
+                    alert("不能小于0！");
+                    flag = false;
+                }
+                if (document.getElementById('p1').value == ''){
+                    alert("不能小于0！");
+                    flag = false;
+                }
+                if (flag){
+                    sale(document.getElementById('s1').value,
+                    document.getElementById('h1').value,
+                    document.getElementById('n1').value,
+                    document.getElementById('p1').value);
+                    alert("保存成功！")
+                }
+            }
+        </script>  
+        海鲜店名称：<input type="text" id="s1">
+        <br />
+        海鲜名称：<input type="text" id="h1">
+        <br /> 
+        销售数量（箱）：<input type="text" id="n1">
+        <br />
+        单价（元）：<input type="text" id="p1">
+        <br /> 
+        <button onclick="CheckValue(event)">提交数据</button>
+    </body>
+</html>

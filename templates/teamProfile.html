@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="ANSI">
+	<title>Team</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">
+	<!--<script src="/static/js/jquery-2.1.4.min.js"></script> -->
+	<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+	<link rel="stylesheet" href="/static/css/style.css">
+
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    
+</head>
+
+<body style="background-color:rgb(247, 245, 246);">
+	<style> 
+        .divcss5-right{width:600px; height:60px;border:1px solid rgb(255, 255, 255);float:right;margin-left:10000px;margin-top:100px}
+        /* css注释：对divcss5-right设置float:right即可让对象靠右浮动 */ 
+    </style> 
+
+    <div class="container">
+        <div class="nanbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">FIFA</a>
+					<ul class="navbar-nav nav">
+						<li><a href="../index">Home</a></li>
+                        <li  class="active">
+                            <a href="../information">Information</a>
+                        </li>
+                        <li><a href="../evaluation">Evaluation</a></li>
+                        <li><a href="../management">Management</a></li>
+						<li><a href="../tutorial">Tutorial</a></li>
+						<li><a href="../about">About</a></li>
+				    	</ul>
+				</div>
+			</div>
+    </div>
+    <br><br><br><br><br>
+
+    
+            <head>
+                <meta charset="utf-8">  
+                <title>Profile</title>
+            </head>
+         
+        <body background="pic_evaluationPage.jpg"style=" background-repeat:no-repeat ;background-size:100% 100%;
+		background-attachment: fixed;">
+    
+            
+              
+                
+                <style type = "text/css">
+                * {
+                    margin: 0;
+                    padding: 0;
+                }
+                body { padding: 10px 100px; }  /* padding定义内边距 */
+                #wrap {
+                    width: 1000px;
+                    margin: -25px auto;
+                    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+                    font-size: 14px;
+                    color: rgb(0, 0, 0);
+                }
+                table {
+                    *border-collapse: collapse;  /* 属性设置表格边框合并，而不是像标准HTML表格那样分开 */
+                    border-spacing: 0;  /* 属性设置相邻单元格的边框间的距离（仅用于“边框分离”模式),在指定的两个长度值中，第一个是水平间隔，第二个是垂直间隔。 */
+                    width: 100%;
+                }
+                /*========bordered table========*/
+                .bordered {
+                    border: solid #ccc 1px;
+                    -moz-border-radius: 6px;
+                    -webkit-border-radius: 6px;
+                    border-radius: 6px;
+                    -webkit-box-shadow: 0 1px 1px #ccc;
+                    -moz-box-shadow: 0 1px 1px #ccc;
+                    box-shadow: 0 1px 1px #ccc;  /* box-shadow 属性向框添加一个或多个阴影,水平 垂直 阴影迷糊 阴影颜色 text-shdow像文本添加阴影 */
+                }
+                .bordered tr {
+                    -o-transition: all 0.1s ease-in-out;
+                    -webkit-transition: all 0.1s ease-in-out;
+                    -moz-transition: all 0.1s ease-in-out;
+                    -ms-transition: all 0.1s ease-in-out;
+                    transition: all 0.1s ease-in-out;  /* all所有属性都将获得过渡效果，完成过渡效果0.1s，ease-in-out规定以慢速开始和结束的过渡效果 */
+                }
+                .bordered .highlight,  .bordered tr:hover { background: #fbf8e9; }
+                .bordered td,  .bordered th {
+                    border-left: 1px solid #ccc;
+                    border-top: 1px solid #ccc;
+                    padding: 10px;
+                    text-align: left;  /* 文本左对齐 */
+                }
+                .bordered th {
+                    background-color: lightcyan;
+                   background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+                   background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+                    background-image: -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+                    background-image: -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+                    background-image: -o-linear-gradient(top, #ebf3fc, #dce9f9);
+                    background-image: linear-gradient(top, #ebf3fc, #dce9f9);
+                 filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ebf3fc, endColorstr=#dce9f9);
+                    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#ebf3fc, endColorstr=#dce9f9)";
+                    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+                    -moz-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+                    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+                    border-top: none;
+                    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+                }
+                .bordered td:first-child,  .bordered th:first-child { border-left: none; }
+                .bordered th:first-child {
+                    -moz-border-radius: 6px 0 0 0;
+                    -webkit-border-radius: 6px 0 0 0;
+                    border-radius: 6px 0 0 0;
+                }
+                .bordered th:last-child {
+                    -moz-border-radius: 0 6px 0 0;
+                    -webkit-border-radius: 0 6px 0 0;
+                    border-radius: 0 6px 0 0;
+                }
+                .bordered tr:last-child td:first-child {
+                    -moz-border-radius: 0 0 0 6px;
+                    -webkit-border-radius: 0 0 0 6px;
+                    border-radius: 0 0 0 6px;
+                }
+                .bordered tr:last-child td:last-child {
+                    -moz-border-radius: 0 0 6px 0;
+                    -webkit-border-radius: 0 0 6px 0;
+                    border-radius: 0 0 6px 0;
+                }
+                </style>
+                
+                <div id="wrap">
+                <table class="bordered" align="left" width="1000"> 
+
+                    <thead>
+                        <tr>
+                            <th colspan="7" bgcolor=" " >Club Profile</th>
+                        </tr>
+                    </thead>
+                    <tbody>  
+                <tr>
+                    <th bgcolor=" ">Name:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ Name}}</td>
+
+                    <th bgcolor=" ">League:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ League}}</td>
+                    <th bgcolor=" ">Transfer Budget:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ TransferBudget}}</td>
+                    <td rowspan="4" width="100"><p><img border="0" src="{{ cluburl}}" height=80px />
+                </p></td>
+                </tr>
+
+            
+                <tr>
+                    <th bgcolor=" ">Domestic Prestige:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ DomesticPrestige}}</td>
+                    <th bgcolor=" ">International Prestige:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ IntPrestige}}</td>
+                    <th bgcolor=" ">Players Count:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ Players}}</td>
+                </tr>
+         
+                
+
+                <tr>
+                    <th bgcolor=" ">Starting Average Age:</th>
+                    <td style="text-align:center" bgcolor="white">     {{StartingAverageAge}}</td>
+                    <th bgcolor=" ">Whole Team Average Age:</th>
+                    <td style="text-align:center" bgcolor="white">     {{AllTeamAverageAge}}</td>
+                    <th bgcolor=" ">Overall ability:</th>
+                    <td style="text-align:center" bgcolor="white">     {{Overall}}</td>
+                    
+                </tr>
+
+                <tr>
+                    <th bgcolor=" ">Attack:</th>
+                    <td style="text-align:center" bgcolor="white">     {{Attack}}</td>
+                    <th bgcolor=" ">Midfield:</th>
+                    <td style="text-align:center" bgcolor="white">     {{Midfield}}</td>
+                    <th bgcolor=" ">Defence:</th>
+                    <td style="text-align:center" bgcolor="white">     {{Defence}}</td>
+                    
+                </tr>
+
+
+               
+            </tbody>
+            </table>
+        </body>
+         
+  
+</div>
+
+</body>
+</html>

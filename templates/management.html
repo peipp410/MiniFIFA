@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<!--<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">-->
+	<script src="/static/js/jquery-2.1.4.min.js"></script>
+	<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body style="background-color:rgb(247, 245, 246);">
+    <script>
+            function CheckValue(event){
+                if (document.getElementById('name1').value == '' || document.getElementById('name2').value == ''){
+                    alert("请设置您的队伍名！");
+                }
+            }
+    </script>  
+    <div class="container">
+        <div class="nanbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">FIFA</a>
+					<ul class="navbar-nav nav">
+						<li><a href="index">Home</a></li>
+                        <li><a href="information">Information</a></li>
+						<li><a href="evaluation">Evaluation</a></li>
+						<li class="active">
+                            <a href="management">Management</a>
+                        </li>
+						<li><a href="tutorial">Tutorial</a></li>
+						<li><a href="about">About</a></li>
+					</ul>
+				</div>
+			</div>
+    </div>
+
+    <br><br><br>
+    <form class="form-inline" action="" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="year1input">Year1</label>
+            <select class="form-control" name="year1">
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+            </select>
+
+            <label for="year2input">Year2</label>
+            <select class="form-control" name="year2">
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+            </select> 
+
+          <label for="name1input">Name1</label>
+          <input type="text" class="form-control" id="name1" placeholder="name1" name="name1"> 
+          <label for="name2input">Name2</label>
+          <input type="text" class="form-control" id="name2" placeholder="name2" name="name2"><br>
+
+          <label for="club1input">Club1</label>
+          <input type="text" class="form-control" id="club1" placeholder="club1" name="club1"> 
+          <label for="club2input">Club2</label>
+          <input type="text" class="form-control" id="club2" placeholder="club2" name="club2">
+
+          <label for="formation1input">Formation1</label>
+          <select class="form-control" name="formation1">
+              <option></option>
+              <option>4-3-1-2</option>
+              <option>4-3-2-1</option>
+              <option>4-3-3</option>
+              <option>4-4-2</option>
+              <option>4-5-1</option>
+              <option>3-4-1-2</option>
+              <option>3-4-3</option>
+              <option>3-5-2</option>
+          </select>
+
+          <label for="formation2input">Formation2</label>
+          <select class="form-control" name="formation2">
+              <option></option>
+              <option>4-3-1-2</option>
+              <option>4-3-2-1</option>
+              <option>4-3-3</option>
+              <option>4-4-2</option>
+              <option>4-5-1</option>
+              <option>3-4-1-2</option>
+              <option>3-4-3</option>
+              <option>3-5-2</option>
+          </select>
+
+        </div>
+        <button type="submit" class="btnsubmit" onclick="CheckValue(event)" id="s1">Submit</button>
+    </form>
+
+    {% load static %}
+    <p>
+        {% if indicator == 0 %}
+            <img src="{{ manage }}" height=700px>
+        {% else %}
+            <br>
+            <div align="center">
+                <img src="{{ manage }}" height=300px>
+            </div>
+        {% endif %}
+    </p>
+    
+</body>
+</html>

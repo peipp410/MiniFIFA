@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Profile</title>
+    <!--<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">
+	<script src="/static/js/jquery-2.1.4.min.js"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+	<link rel="stylesheet" href="/static/css/style.css">
+
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <style> 
+        .divcss5-right{width:600px; height:60px;border:1px solid rgb(255, 255, 255);float:right;margin-right:250px;margin-top:-100px}
+        /* css注释：对divcss5-right设置float:right即可让对象靠右浮动 */ 
+    </style> 
+</head>
+
+<body style="background-color:rgb(247, 245, 246);">
+	
+
+    <div class="container">
+        <div class="nanbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">FIFA</a>
+					<ul class="navbar-nav nav">
+						<li><a href="../index">Home</a></li>
+                        <li  class="active">
+                            <a href="../information">Information</a>
+                        </li>
+                        <li><a href="../evaluation">Evaluation</a></li>
+                        <li><a href="../management">Management</a></li>
+						<li><a href="../tutorial">Tutorial</a></li>
+						<li><a href="../about">About</a></li>
+					</ul>
+				</div>
+			</div>
+    </div>
+    <br><br><br>
+    
+            <div id="wrap">
+            <table class="a" border="1" align="center" cellpadding="14" width="1000">
+                <thead>
+                <tr>
+                    <th colspan="7" bgcolor="#D3D3D3" >Player Profile</th>
+                </tr>
+               </thead>
+                <style></style>
+                <tr>
+                    <th bgcolor="#D3D3D3">ID:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ ID}}</td>
+
+                    <th bgcolor="#D3D3D3">Name:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ FullName}}</td>
+                    <th bgcolor="#D3D3D3">Age:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ Age}}</td>
+                    <td rowspan="5" width="100" style="text-align:center"><p><img border="0" src="{{ playerimg }}" height="85px"/>
+                </p></td>
+                </tr>
+         
+                <tr>
+                    <th bgcolor="#D3D3D3">Height:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ Height}}</td>
+                    <th bgcolor="#D3D3D3">Weight:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ Weight}}</td>
+                    <th bgcolor="#D3D3D3">Positions:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ Positions}}</td>
+                </tr>
+         
+                
+
+                <tr>
+                    <th bgcolor="#D3D3D3">Club Position:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ ClubPosition}}</td>
+                    <th bgcolor="#D3D3D3">Nationality:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ Nationality}}</td>
+                    <th bgcolor="#D3D3D3">ValueEUR:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ ValueEUR}}</td>
+                    
+                </tr>
+
+               
+
+                <tr>
+                    
+                    <th bgcolor="#D3D3D3">Club:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ Club}}</td>
+                    <th bgcolor="#D3D3D3">National Team:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ NationalTeam}}</td>
+                    <th bgcolor="#D3D3D3">Preferred Foot:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ PreferredFoot}}</td>
+                </tr>
+               
+                <tr>
+                    <th bgcolor="#D3D3D3">WageEUR:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ WageEUR}}</td>
+                    <th bgcolor="#D3D3D3">Attacking Work Rate:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ AttackingWorkRate}}</td>
+                    <th bgcolor="#D3D3D3">Defensive Work Rate:</th>
+                    <td style="text-align:center" bgcolor="white">     {{ DefensiveWorkRate}}</td>
+                   
+                </tr>
+                
+                <!--
+                <tr>
+                     <th height="160" bgcolor="#D3D3D3">test_1:</th>
+                     <td colspan="6"bgcolor="white">
+                   <p>a</p>
+                   <p>a</p>
+                   <p>a</p>
+                    </td>
+                </tr>
+         
+                <tr>
+                     <th height="160" bgcolor="#D3D3D3">test_2:</th>
+                     <td colspan="6"bgcolor="white">
+                    <p>b</p>
+                    <p>b</p>
+                    <p>b</p>
+                </tr>
+         
+                <tr>
+                     <th height="160" bgcolor="#D3D3D3">test_3:</th>
+                     <td colspan="6"bgcolor="white">
+                    <p>c</p>
+                    <p>c</p>
+                    <p>c</p>
+                </tr>
+                -->
+            </table>
+        </body>
+
+        <br><br>
+         
+        {% load static %}
+
+        <table align="center">
+            <tr>
+                <td ><center><img src="/static/img/attacking.png" height=220px></center></td>
+                <td ><center><img src="/static/img/skill.png" height=220px></center></td>
+                <td><center><img src="/static/img/movement.png" height=220px></center></td>
+            </tr>
+        
+            <tr>
+                <td ><center><img src="/static/img/power.png" height=220px></center> </td>
+                <td><center><img src="/static/img/mentality.png" height=220px></center></td>
+                <td><center><img src="/static/img/rating.png" height=220px></center></td>
+            </tr>
+        </table>
+
+</div>
+</body>
+</html>

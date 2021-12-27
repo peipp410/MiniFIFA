@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Evaluation</title>
+	<!--<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css"> -->
+	<script src="/static/js/jquery-2.1.4.min.js"></script>
+	<script src="/static/bootstrap/js/bootstrap.min.js"></script> 
+	<link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+
+
+<body style="background-color:rgb(247, 245, 246);">
+    <div class="container">
+        <div class="nanbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">FIFA</a>
+					<ul class="navbar-nav nav">
+						<li><a href="index">Home</a></li>
+                        <li><a href="information">Information</a></li>
+                        <li class="active">
+						    <a href="evaluation">Evaluation</a>
+                        </li>
+                        <li><a href="management">Management</a></li>
+						<li><a href="tutorial">Tutorial</a></li>
+						<li><a href="about">About</a></li>
+					</ul>
+				</div>
+			</div>
+    </div>
+    <br><br><br>
+    <form class="form-inline" action="" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <table>
+                <tr>
+                    <td ><label for="paceinput">Pace</label>
+                        <input type="text" class="form-control" id="paceinput" placeholder="PaceTotal" name="pace"> </center></td>
+                    <td ><label for="shootinginput">Shooting</label>
+                        <input type="text" class="form-control" id="shootinginput" placeholder="ShootingTotal" name="shooting"></center></td>
+                    <td><label for="passinginput">Passing</label>
+                        <input type="text" class="form-control" id="passinginput" placeholder="PassingTotal" name="passing"> <br></center></td>
+                </tr>
+            
+                <tr>
+                    <td ><label for="dribblinginput">Dribbling</label>
+                        <input type="text" class="form-control" id="dribblinginput" placeholder="DribblingTotal" name="dribbling"></center> </td>
+                    <td><label for="defendinginput">Defending</label>
+                        <input type="text" class="form-control" id="defendinginput" placeholder="DefendingTotal" name="defending"></center></td>
+                    <td><label for="physicalinput">Physical</label>
+                        <input type="text" class="form-control" id="physicalinput" placeholder="PhysicalTotal" name="physical"></center></td>
+                </tr>
+            </table>
+        <!-- 
+          <label for="paceinput">Pace</label>
+          <input type="text" class="form-control" id="paceinput" placeholder="PaceTotal" name="pace"> 
+          <label for="shootinginput">Shooting</label>
+          <input type="text" class="form-control" id="shootinginput" placeholder="ShootingTotal" name="shooting">
+          <label for="passinginput">Passing</label>
+          <input type="text" class="form-control" id="passinginput" placeholder="PassingTotal" name="passing"> <br>
+          <label for="dribblinginput">Dribbling</label>
+          <input type="text" class="form-control" id="dribblinginput" placeholder="DribblingTotal" name="dribbling">
+          <label for="defendinginput">Defending</label>
+          <input type="text" class="form-control" id="defendinginput" placeholder="DefendingTotal" name="defending">
+          <label for="physicalinput">Physical</label>
+          <input type="text" class="form-control" id="physicalinput" placeholder="PhysicalTotal" name="physical">
+        -->     
+        </div>
+        <button type="submit" class="btnsubmit" id="s1">Submit</button>
+    </form>
+
+    <h3>
+        {{ radaratt }}
+    </h3>
+    {% load static %}
+    <p>
+        <img src="{{ radar }}" height=350px>
+    </p>
+
+    <h4>
+        {{ result }}
+    </h4>
+
+    <br>
+
+    <h3 class="panel-title">Similar players</h3>
+    <div class='row'>
+        <div class=" col-sm-6">
+            <div class="tab-content ">
+                <div class="tab-pane active" id="Total">
+                
+                    <table class="table table-striped table-responsive-sm table-hover" id="query1">
+                        <thead class="thead-light">
+                            <tr>
+                                <th style="text-align:center" width="3"> ID</th>
+                                <th style="text-align:center" width="250"> Name</th>
+                                <th style="text-align:center" width="250"> Club</th>
+                                <th style="text-align:center" width="25"> Overall</th>                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for key, value in players.items %}
+                            <tr>
+                                <td style="text-align:center">  <a href="players/{{ value.ID }}">{{ value.ID}} </a> </td>
+                                <td style="text-align:center">     {{ value.Name}}</td>
+                                <td style="text-align:center">  <a href="clubs/{{ value.Club }}">{{ value.Club}}</a></td>
+                                <td style="text-align:center">     {{ value.Overall}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/particles.min.js"></script>
+<script src="/static/js/app.js"></script>
+
+</body>
+
+</html>
